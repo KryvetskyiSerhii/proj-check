@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "assets/*": ["./assets/*"],
+      "pages/*": ["./pages/*"]
+    }
+  },
+
+  "exclude": ["node_modules"],
+  "include": ["src", "../AboutUsHeader.jsx"]
+}

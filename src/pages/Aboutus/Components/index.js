@@ -1,0 +1,7 @@
+export { AboutUsContent } from './AboutUsContent'
+export { AboutUsFooter } from './AboutUsFooter'
+export { AboutUsHeader } from './AboutUsHeader'
+export { AboutUsInfo } from './AboutUsInfo'
+export { AboutUsTitle } from './AboutUsTitle'
+export { Carousel } from './Carousel/Carousel'
+export { Slider } from './Slider/Slider'

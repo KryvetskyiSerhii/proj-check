@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  web:
+    build:
+      context: .
+    # it's better to keep port in docker-compose.override.yml if there are options for this property
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - "./nginx/nginx.conf:/etc/nginx/conf.d/default.conf"

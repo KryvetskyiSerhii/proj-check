@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "email": "kryvetskyis@gmail.com",
+      "password": "$2a$10$D7KpS0P7gFfCM822uSl5geUuufeeFZgtrouvH83VdK6C06t8NtAaS",
+      "id": 1
+    },
+    {
+      "email": "new@fro.de",
+      "password": "$2a$10$RWnVBGoCPbK4UUOL6ejCl.YpYEtTSZVG7/Pv2dE.N8sA4a6XcGRIu",
+      "id": 2
+    },
+    {
+      "email": "new@fro.ded",
+      "password": "$2a$10$A3fFUzgO8Bm7GtnSA.9WNOjJyYttFd97a.M0UFB0dtcTTn1Y1FbYK",
+      "id": 3
+    },
+    {
+      "email": "sam@sam.de",
+      "password": "$2a$10$hqbWE1lGzIaYJ8KFILzqw.mT3nU/nFjVjms3NfCXFwnFPum7oYh8a",
+      "id": 4
+    },
+    {
+      "email": "one@one.one",
+      "password": "$2a$10$5sASzjsYAwLO4ZvGASkb.Oa2xkGiGD7WCMr7Lq6caquxkxBR6HFty",
+      "id": 5
+    },
+    {
+      "email": "111@111.com",
+      "password": "$2a$10$YvRi3Q6GotcBb9sw06yf6OMIFkYkU92v..y3UZp21HLsqvQGY9XMm",
+      "id": 6
+    }
+  ]
+}
