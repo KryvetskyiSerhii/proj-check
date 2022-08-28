@@ -13,24 +13,24 @@ export const AboutUsMain = () => {
   const images = useSelector(state => state.slider.carouselData)
 
   return (
-    <CustomScroll>
-      <AboutUsBlock>
-        <AboutUsHeader />
-        <AboutUsContent />
-        <AboutUsInfo />
-        <Container width='80vw'>
-          <Carousel>
-            {images.map(elem => (
-              <AboutUsItem>
-                <StyledTitle>{elem.title}</StyledTitle>
-                <ImageStyled src={elem.img} alt='carouselImg' />
-              </AboutUsItem>
-            ))}
-          </Carousel>
-        </Container>
-        <AboutUsHQ />
-        <AboutUsFooter />
-      </AboutUsBlock>
-    </CustomScroll>
+    // <CustomScroll>
+    <AboutUsBlock>
+      <AboutUsHeader />
+      <AboutUsContent />
+      <AboutUsInfo />
+      <Container width='80vw'>
+        <Carousel>
+          {images.map(elem => (
+            <AboutUsItem>
+              <StyledTitle>{elem.title}</StyledTitle>
+              <ImageStyled src={elem.img} alt='carouselImg' />
+            </AboutUsItem>
+          ))}
+        </Carousel>
+      </Container>
+      <AboutUsHQ />
+      <AboutUsFooter />
+    </AboutUsBlock>
+    // </CustomScroll>
   )
 }

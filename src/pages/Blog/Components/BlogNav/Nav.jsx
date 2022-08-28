@@ -14,7 +14,7 @@ export const Nav = props => {
   const articles = useSelector(state => state.articles.articleItems)
   const style = useSelector(state => state.general)
   return (
-    <NavStyled width='200px'>
+    <NavStyled width='10vw'>
       <ImageBlockLink to='/' margin='-40px'>
         <ImageStyled src={logo} alt='logo' />
       </ImageBlockLink>

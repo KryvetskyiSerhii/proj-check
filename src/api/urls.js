@@ -17,9 +17,9 @@ export const apiUrls = {
     },
     amazon: `https://amazon24.p.rapidapi.com/api/product`,
     videos: {
-      search: `https://vid.puffyan.us/api/v1/search?local=true&region=DE&q=`,
-      popular: `https://vid.puffyan.us/api/v1/popular?local=true&region=DE`,
-      trending: `https://vid.puffyan.us/api/v1/trending?local=true&region=DE`,
+      search: `https://inv.riverside.rocks/api/v1/search?local=true&region=DE&q=`,
+      popular: `https://inv.riverside.rocks/api/v1/popular?local=true&region=DE`,
+      trending: `https://inv.riverside.rocks/api/v1/trending?local=true&region=DE`,
     },
   },
 }

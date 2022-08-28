@@ -27,15 +27,15 @@ export const VideoItem = styled.iframe`
   overflow-x: hidden;
   border-radius: 10px 10px 0px 0px;
   border: none;
-  width: ${({ filmScreen }) => (filmScreen ? '98vw' : '300px')};
-  height: ${({ filmScreen }) => (filmScreen ? '85vh' : '300px')};
+  width: ${({ filmScreen }) => (filmScreen ? '98vw' : '500px')};
+  height: ${({ filmScreen }) => (filmScreen ? '85vh' : '200px')};
   position: relative;
 `
 export const VideoItemContainer = styled.div`
   position: ${({ filmScreen }) => (filmScreen ? 'fixed' : 'relative')};
   top: ${({ filmScreen }) => (filmScreen ? '0' : 'none')};
   left: ${({ filmScreen }) => (filmScreen ? '0' : 'none')};
-  height: ${({ filmScreen }) => (filmScreen ? '98vh' : '430px')};
+  height: ${({ filmScreen }) => (filmScreen ? '98vh' : '300px')};
   z-index: ${({ filmScreen }) => (filmScreen ? '100' : '1')};
   margin: 10px;
   border-radius: 10px;
@@ -50,15 +50,15 @@ export const VideoItemContainer = styled.div`
 `
 export const VideoItemFilmScreen = styled.img`
   position: absolute;
-  top: ${({ filmScreen }) => (filmScreen ? '82%' : '64%')};
-  left: ${({ filmScreen }) => (filmScreen ? '82%' : '37%')};
+  top: ${({ filmScreen }) => (filmScreen ? '84%' : '64%')};
+  left: ${({ filmScreen }) => (filmScreen ? '88%' : '37%')};
   width: 20px;
   cursor: pointer;
   z-index: 20;
 `
 export const VideoTextBlock = styled.div`
   display: flex;
-  width: ${({ filmScreen }) => (filmScreen ? '95vw' : '300px')};
+  width: ${({ filmScreen }) => (filmScreen ? '95vw' : '500px')};
   justify-content: space-between;
   align-items: center;
   overflow-x: hidden;
@@ -73,11 +73,11 @@ export const VideoText = styled.p`
 export const VideoSettingsStyled = styled.div`
   position: fixed;
   right: 0;
-  top: ${({ onFlip }) => (onFlip ? '11vh' : '17vh')};
+  top: ${({ onFlip }) => (onFlip ? '11vh' : '13.7vh')};
   padding-top: 1vh;
   border-left: ${props => props.theme.border};
   width: 15vw;
-  height: ${({ height, onFlip }) => (onFlip ? parseInt(height) + 5.5 + 'vh' : height)};
+  height: ${({ height, onFlip }) => (onFlip ? parseInt(height) + 3.4 + 'vh' : height)};
   z-index: 10;
 `
 export const VideoList = styled.ul`

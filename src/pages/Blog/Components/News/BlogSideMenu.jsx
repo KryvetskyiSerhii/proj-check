@@ -12,8 +12,10 @@ import { useSelector } from 'react-redux'
 
 export const BlogSideMenu = ({ content, addLike }) => {
   const style = useSelector(state => state.general)
+  const height = window.innerHeight
+  console.log(height)
   return (
-    <BlogSideMenuStyled>
+    <BlogSideMenuStyled height={height}>
       <BlogSideMenuContainer>
         <BlogSideMenuList>
           <BlogSideMenuItem>

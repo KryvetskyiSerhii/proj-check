@@ -6,7 +6,7 @@ import { SimpleBlock } from 'components/common/CommonStyled.styled'
 import { Footer } from 'components/modules/Footer/Footer'
 import { useDispatch, useSelector } from 'react-redux'
 import { offRightClickMenu } from 'redux/search'
-import { closeModal } from 'redux/menu'
+
 
 export const Main = () => {
   const dispatch = useDispatch()

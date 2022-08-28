@@ -1,7 +1,4 @@
 import { BlogFooterBlock, BlogFooterStyled } from 'pages/Blog/Styles/news/NewsStyled.styled'
-import facebookLight from 'assets/icons/white/small/facebookLight.svg'
-import instagramLight from 'assets/icons/white/small/instagramLight.svg'
-import twitterLight from 'assets/icons/white/small/twitterLight.svg'
 import { FlexBlock, ImageStyled } from 'components/common/CommonStyled.styled'
 import { AboutFooterContact } from 'pages/Aboutus/Styles/footer/AboutUsFooterStyled.styled'
 import { useSelector } from 'react-redux'

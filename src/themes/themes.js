@@ -1,14 +1,14 @@
 import dark from 'assets/images/backgrounds/dark.jpg'
-import blueBackground from 'assets/images/backgrounds/blueBackground.png'
-import blackgrayBackground from 'assets/images/backgrounds/blackgrayBackground.png'
-import whiteBackground from 'assets/images/backgrounds/whiteBackground.png'
+import blackgray from 'assets/images/backgrounds/blackgray.png'
 import shareLight from 'assets/icons/new/white/small/shareLight.svg'
 import shareBlack from 'assets/icons/new/black/small/shareBlack.svg'
+import blue from 'assets/images/backgrounds/blue.png'
+import white from 'assets/images/backgrounds/white.png'
 
 export const themes = {
   darkTheme: {
     color: '#fff',
-    background: `url(${dark}) no-repeat`,
+    background: `url(${blue}) no-repeat`,
     border: '1px solid #fff',
     icon: 'rotate(200deg)',
     modalBackground: `url(${dark}) no-repeat`,
@@ -21,7 +21,7 @@ export const themes = {
     loginColor: '#fff',
     loginInputBorder: 'none',
     resultBlockBorder: '1px solid rgba(242, 237, 237, 0.1)',
-    verticalBackground: `url(${dark})`,
+    verticalBackground: 'transparent',
     verticalBgHover: '#fff',
     verticalBoxShadowBefore: '1px 8px 0px #fff',
     verticalBoxShadowAfter: '1px -8px 0px #fff',
@@ -35,7 +35,7 @@ export const themes = {
   },
   lightTheme: {
     color: '#000',
-    background: '#fff',
+    background: `url(${white}) no-repeat`,
     border: '1px solid #000',
     icon: 'none',
     modalBackground: 'rgb(241, 241, 241)',

@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components'
 import dark from 'assets/images/backgrounds/dark.jpg'
 import bricks from 'assets/images/backgrounds/bricks.jpg'
-import designBack from 'assets/images/backgrounds/designBack.svg'
+
 import forest from 'assets/images/backgrounds/forest.jpg'
 import bird from 'assets/images/backgrounds/bird.svg'
 

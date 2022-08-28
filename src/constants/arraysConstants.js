@@ -4,6 +4,8 @@ import twitterLight from 'assets/icons/white/small/twitterLight.svg'
 import facebookBlack from 'assets/icons/new/black/small/facebookBlack.svg'
 import instagramBlack from 'assets/icons/new/black/small/instagramBlack.svg'
 import twitterBlack from 'assets/icons/new/black/small/twitterBlack.svg'
+import paperPlaneBlack from 'assets/icons/new/black/small/paperPlaneBlack.svg'
+import paperPlaneLight from 'assets/icons/new/white/small/paperPlaneLight.svg'
 import img1 from 'assets/images/slider/img1.jpg'
 import img2 from 'assets/images/slider/img2.jpg'
 import img3 from 'assets/images/slider/img3.jpg'
@@ -39,6 +41,11 @@ export const SOCIAL_NETWORKS = [
     name: 'twitter',
     imgLight: twitterLight,
     imgBlack: twitterBlack,
+  },
+  {
+    name: 'telegram',
+    imgLight: paperPlaneLight,
+    imgBlack: paperPlaneBlack,
   },
 ]
 

@@ -106,6 +106,7 @@ export const BlogFooterStyled = styled.div`
   padding: 10px 20px;
   margin-top: 50px;
   color: #fff;
+  height: 10vh;
 `
 
 export const BlogFooterBlock = styled.div`
@@ -116,13 +117,14 @@ export const BlogSideMenuStyled = styled.div`
   position: fixed;
   right: 1vw;
   top: 3vh;
-  height: 35vh;
+  height: ${({ height }) => (height > 900 ? '23vh' : '35vh')};
   width: 6vw;
   background: transparent;
   border: ${props => props.theme.border};
   border-radius: 5px;
   color: #fff;
-  padding: 20px 0px;
+  padding: 20px 5px;
+  overflow: hidden;
   text-align: center;
   box-shadow: ${props => props.theme.blogMenuShadow};
 `
@@ -132,6 +134,9 @@ export const BlogSideMenuContainer = styled.div`
 `
 export const BlogSideMenuList = styled.ul`
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 export const BlogSideMenuItem = styled.li`
   cursor: pointer;

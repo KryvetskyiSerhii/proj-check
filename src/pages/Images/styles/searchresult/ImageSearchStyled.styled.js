@@ -6,7 +6,7 @@ export const ImageResultContainer = styled.div`
   flex-wrap: wrap;
   width: 95vw;
   min-height: 100vh;
-  padding: ${({ menu }) => (menu ? '90px 0px 0px 60px' : '110px 0px 0px 20px')};
+  padding: ${({ menu }) => (menu ? '10vh 0px 0px 60px' : '13vh 0px 0px 20px')};
 `
 
 export const ImageResultItem = styled.div`

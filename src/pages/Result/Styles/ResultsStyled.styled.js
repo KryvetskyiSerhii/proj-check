@@ -30,7 +30,7 @@ export const ResultList = styled.ul`
   color: ${props => props.theme.color};
 `
 export const ResultMain = styled.div`
-  margin: ${({ menu }) => (menu ? '7px 0px 0px 0px' : '120px 0px 0px 0px')};
+  margin: ${({ menu }) => (menu ? '7px 0px 0px 0px' : '14vh 0px 0px 0px')};
   grid-area: main;
   min-height: 100vh;
   display: flex;

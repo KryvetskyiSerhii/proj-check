@@ -15,14 +15,14 @@ import arrowBottomBlack from 'assets/icons/arrowBottomBlack.svg'
 import { VideoCategoriesForm } from './VideoCategoriesForm'
 
 export const VideoSettings = ({ onFlip }) => {
-  const [height, setHeight] = useState('83vh')
+  const [height, setHeight] = useState('87vh')
   const dispatch = useDispatch()
   const isCategoryActive = useSelector(state => state.videoSlice.isCategoryActive)
   const style = useSelector(state => state.general)
 
   const listenToScroll = () => {
     const winScroll = window.innerHeight + window.scrollY
-    winScroll >= document.body.scrollHeight - 100 ? setHeight('70vh') : setHeight('83vh')
+    winScroll >= document.body.scrollHeight - 100 ? setHeight('78.6vh') : setHeight('87vh')
   }
 
   useEffect(() => {

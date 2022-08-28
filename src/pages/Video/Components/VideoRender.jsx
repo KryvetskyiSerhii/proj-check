@@ -23,7 +23,7 @@ export const VideoRender = ({ source, title, length, count, toHHMMS }) => {
       />
       <VideoItem
         filmScreen={filmScreen}
-        src={`https://www.youtube.com/embed/${source}`}
+        src={`https://www.youtube.com/embed/${source}?modestbranding=1`}
         title={title}
         frameborder='0'
         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen'

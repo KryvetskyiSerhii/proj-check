@@ -91,7 +91,7 @@ export const OptionsLinkShopping = styled(Link)`
 
 export const OptionsVerticalStyled = styled.div`
   position: fixed;
-  top: 80px;
+  top: 10.3vh;
   left: 0;
   width: ${({ menu }) => (menu ? '170px' : '55px')};
   height: 85vh;
@@ -99,14 +99,14 @@ export const OptionsVerticalStyled = styled.div`
   border: ${props => props.theme.border};
   border-top: none;
   border-radius: 0px 0px 20px 20px;
-  padding: 10px 0px 10px 5px;
+  padding: 5vh 0px 10px 5px;
   box-shadow: 5px 5px 5px #000;
   transition: all 0.4s ease-in;
 `
 export const OptionsVerticalExtendedStyled = styled.div`
   position: fixed;
   top: 10px;
-  left: 5px;
+  left: 1px;
   width: ${({ menu }) => (menu ? '170px' : '55px')};
   height: 95vh;
   background: ${props => props.theme.verticalBackground};

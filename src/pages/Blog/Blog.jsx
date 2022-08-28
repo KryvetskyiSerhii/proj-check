@@ -7,7 +7,6 @@ import { NavMobile } from 'pages/Blog/Components/BlogNav/NavMobile'
 import { BlogBlock } from './Styles/BlogStyled.styled'
 import { BlogMainPage } from './Styles/BlogStyled.styled'
 import { BlogFooter } from './Components/News/BlogFooter'
-import { ARTICLES } from 'constants/articlesList'
 
 export const Blog = props => {
   const createLinks = useSelector(state => state.articles.articleItems)

@@ -10,7 +10,7 @@ export const VimeoPlayer = styled(ReactPlayer)`
   overflow-x: hidden;
 `
 export const VimeoItemsBlock = styled.div`
-  padding: ${({ menu }) => (menu ? '90px 0px 0px 60px' : '110px 0px 0px 20px')};
+  padding: ${({ menu }) => (menu ? '10vh 0px 0px 60px' : '14vh 0px 0px 20px')};
   display: flex;
   justify-content: space-between;
   width: 80vw;
