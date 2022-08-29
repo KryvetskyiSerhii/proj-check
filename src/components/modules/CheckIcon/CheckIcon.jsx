@@ -6,8 +6,9 @@ import {
   CircleProgressSvg,
 } from './CheckIconStyled.styled'
 import { useState, useLayoutEffect } from 'react'
+import { useSelector } from 'react-redux'
 
-export const CheckIcon = ({ article }) => {
+export const CheckIcon = ({ article, divHeight }) => {
   const DIAMETER = 50
   const STROKE_WIDTH = 6
   const RADIUS = DIAMETER / 2 - STROKE_WIDTH / 2
@@ -16,12 +17,14 @@ export const CheckIcon = ({ article }) => {
   const position = Math.max(1 - progress, 0)
   const complete = position === 0
   const notMoved = position === 1
+  const onExpand = useSelector(state => state.articles.onExpand)
 
   useLayoutEffect(() => {
     const updateHeight = () => {
       if (!article.current) return
       const { height } = article.current.getBoundingClientRect()
-      setProgress(window.scrollY / (height - window.innerHeight))
+      if (onExpand === 'none') setProgress(window.scrollY / (height - window.innerHeight))
+      else setProgress(window.scrollY / (height - divHeight))
     }
     updateHeight()
     window.addEventListener('scroll', updateHeight)

@@ -144,3 +144,75 @@ export const BlogSideMenuItem = styled.li`
     margin-bottom: 10px;
   }
 `
+export const OldNewsStyled = styled.div`
+  width: 80vw;
+`
+
+export const OldNewsItemContainer = styled.div`
+  width: 80%;
+  display: flex;
+  align-items: center;
+  color: ${props => props.theme.color};
+  padding: 1rem;
+  border-bottom: ${props => props.theme.blogBorder};
+  cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+    img {
+      width: 12vw;
+    }
+  }
+`
+
+export const OldNewsImage = styled.img`
+  width: 10vw;
+`
+
+export const OldNewsItemBlock = styled.div`
+  margin-left: 50px;
+`
+
+export const OldNewsTitle = styled.h3``
+
+export const OldNewsText = styled.p`
+  margin-top: 20px;
+`
+export const NewsSliderStyled = styled.div`
+  poistion: relative;
+`
+export const NewsSliderContainer = styled.div`
+  width: 70vw;
+  margin: 30px auto 0;
+  position: relative;
+  overflow: hidden;
+  height: 25vh;
+  // border-radius: 10px;
+  // box-shadow: 10px 10px 10px #000;
+  transition: all 0.4s ease-in;
+
+  z-index: 20;
+`
+export const NewsSliderImageBlock = styled.div`
+  width: 20vw;
+
+  height: 100%;
+  position: absolute;
+  opacity: ${({ slideIndex, index }) => (slideIndex === index + 1 ? '1' : '0')};
+  transition: all 0.8s ease-in;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+`
+export const NewsSliderTextBlock = styled.div`
+  width: 30vw;
+  position: absolute;
+  top: 0;
+  right: -30vw;
+  color: ${props => props.theme.color};
+  padding: 10px;
+  z-index: 20;
+`
+export const NewsSliderTitle = styled.h3``
+export const NewsSliderText = styled.p``

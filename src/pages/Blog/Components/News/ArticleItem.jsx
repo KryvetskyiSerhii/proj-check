@@ -17,18 +17,22 @@ import { BlogSideMenu } from './BlogSideMenu'
 import { CheckIcon } from 'components/modules/CheckIcon/CheckIcon'
 import { useRef } from 'react'
 import { ARTICLES } from 'constants/articlesList'
+import { useEffect } from 'react'
 
-export const ArticleItem = () => {
+export const ArticleItem = ({ id }) => {
   const idNumber = useParams()
   const article = useRef()
-  const content = useSelector(state => state.articles.articleItems).filter(
-    e => e.link === idNumber.id
-  )
+  const content = useSelector(state => state.articles.articleItems).filter(e => e.link === id)
   const [scrollPos, setScrollPos] = useState(0)
   const dispatch = useDispatch()
+  const [divHeight, setDivHeight] = useState(0)
+
+  useEffect(() => {
+    setDivHeight(article.current.clientHeight)
+  }, [])
 
   const addLike = () => {
-    dispatch(onAddLikes(idNumber.id))
+    dispatch(onAddLikes(id))
   }
 
   const handleScollDown = e => {
@@ -70,7 +74,7 @@ export const ArticleItem = () => {
         </NewsArticleItem>
         <BlogSideMenu addLike={addLike} content={content} />
       </Container>
-      <CheckIcon article={article} />
+      <CheckIcon article={article} divHeight={divHeight} />
       <button onClick={handleScrollBack}>Get back</button>
     </BlogMainPage>
   )

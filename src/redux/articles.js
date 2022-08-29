@@ -282,6 +282,7 @@ const articles = createSlice({
         likes: 0,
       },
     ],
+    onExpand: '',
   },
   reducers: {
     scrollToTheElement(state, action) {
@@ -294,8 +295,11 @@ const articles = createSlice({
       const filterState = state.articleItems.filter(e => e.id === action.payload)
       filterState[0].likes += 1
     },
+    setOnExpand(state, action) {
+      state.onExpand = action.payload
+    },
   },
 })
 
 export default articles.reducer
-export const { toggleClass, scrollToTheElement, onAddLikes } = articles.actions
+export const { toggleClass, scrollToTheElement, onAddLikes, setOnExpand } = articles.actions
