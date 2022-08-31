@@ -52,22 +52,22 @@ export const VideoRender = ({ source, title, length, count, toHHMMS }) => {
 
   return (
     <VideoItemContainer filmScreen={filmScreen}>
-      <Plyr source={videoSrc} />
-      {/*      
-        <ReactPlayer
-          url={`https://www.youtube.com/watch?v=${source}&modestbranding=1`}
-          controls
-          height='115px'
-          width='200px'
-          ref={playerRef}
-          config={{
-            file: {
-              attributes: {
-                crossorigin: 'anonymous',
-              },
+      {/* <Plyr source={videoSrc} /> */}
+
+      <ReactPlayer
+        url={`https://www.youtube.com/watch?v=${source}&modestbranding=1`}
+        controls
+        height='115px'
+        width='200px'
+        ref={playerRef}
+        config={{
+          file: {
+            attributes: {
+              crossorigin: 'anonymous',
             },
-          }}
-        /> */}
+          },
+        }}
+      />
 
       <VideoTextBlock filmScreen={filmScreen}>
         <VideoText>{title} </VideoText>

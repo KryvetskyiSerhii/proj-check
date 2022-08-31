@@ -17,7 +17,7 @@ export const VideoMain = () => {
   const [resultsVisible, setResultsVisible] = useState(28)
   const onFlip = useSelector(state => state.general.flipMenu)
   const showMore = () => {
-    setResultsVisible(resultsVisible + 17)
+    setResultsVisible(resultsVisible + 20)
   }
   const toHHMMSS = sec => {
     let sec_num = parseInt(sec)

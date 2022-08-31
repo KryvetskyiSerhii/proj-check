@@ -32,6 +32,7 @@ export const FlexBlock = styled.div`
 export const StyledForm = styled.form`
   display: flex;
   justify-content: ${({ content }) => content};
+  position: relative;
 `
 export const H1TitleStyled = styled.h1``
 

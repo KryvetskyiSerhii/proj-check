@@ -26,3 +26,29 @@ export const RightClickMenuItem = styled.li`
   }
   cursor: pointer;
 `
+export const SuggestionsContainer = styled.div`
+  width: 20vw;
+  position: absolute;
+  top: 5vh;
+  left: 26vw;
+  background: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  color: #000;
+`
+
+export const SuggestionsList = styled.ul`
+  list-style: none;
+`
+export const SuggestionsListItem = styled.li`
+  cursor: pointer;
+  padding: 0px 0px 0px 3px;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+    background: rgba(211, 211, 211, 0.7);
+  }
+`

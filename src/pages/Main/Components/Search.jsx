@@ -5,10 +5,11 @@ import logo from 'assets/images/logo.png'
 import {
   fetchWebPageData,
   fetchWikiData,
-  searchUni,
   setInputValue,
   onRightClickMenu,
   fetchSearxData,
+  fetchSuggestionData,
+  clearSearchSuggestions,
 } from 'redux/search'
 import { closeModal } from 'redux/menu'
 import { changeValue, deleteValue, switchDeleteButton } from 'redux/general'
@@ -38,9 +39,11 @@ import { fetchImageData, fetchSearxImageData } from 'redux/imagesSlice'
 import { fetchNewsData, fetchSearxNewsData } from 'redux/newsSlice'
 import { fetchFakeShoppingData, fetchShoppingData } from 'redux/shoppingSlice'
 import { fetchPopularVideo, fetchVideoData } from 'redux/videoSlice'
+import { Suggestion } from './Suggestion'
 
 export const Search = () => {
   const inputValue = useRef()
+
   const dispatch = useDispatch()
   const deleteButton = useSelector(state => state.general.isDeleteButtonVisible)
   const searchValue = useSelector(state => state.general.inputValue)
@@ -48,6 +51,7 @@ export const Search = () => {
   const showRightClickMenu = useSelector(state => state.search.rightClickMenu)
   const [posX, setPosX] = useState(0)
   const [posY, setPosY] = useState(0)
+  const suggestions = useSelector(state => state.search.searchSuggestions)
 
   const handleRightClickMenu = e => {
     e.preventDefault()
@@ -84,7 +88,7 @@ export const Search = () => {
       dispatch(setActiveItem('news'))
     }
     if (showRightClickMenu.videos) {
-      dispatch(fetchVideoData(value))
+      dispatch(fetchVideoData(searchValue))
       dispatch(setActiveItem('video'))
       // dispatch(fetchWebPageData(value))
     }
@@ -111,6 +115,14 @@ export const Search = () => {
     dispatch(deleteValue())
     inputValue.current.value = ''
     dispatch(switchDeleteButton(inputValue.current.value))
+    dispatch(clearSearchSuggestions())
+  }
+
+  const handleKeyDown = e => {
+    if (e.key !== 'Tab')
+      setTimeout(() => {
+        dispatch(fetchSuggestionData(inputValue.current.value))
+      }, 500)
   }
 
   return (
@@ -119,6 +131,9 @@ export const Search = () => {
         <ImageStyled width='400px' src={logo} alt='logo' />
       </ImageBlock>
       <StyledForm onSubmit={startSearching} content='center'>
+        {suggestions.length > 0 && (
+          <Suggestion suggestions={suggestions} searchValue={searchValue} dispatch={dispatch} />
+        )}
         <SearchInput
           width='500px'
           height='45px'
@@ -133,6 +148,7 @@ export const Search = () => {
           onChange={makeDeleteButtonVisible}
           value={searchValue}
           onContextMenu={handleRightClickMenu}
+          onKeyDown={handleKeyDown}
         />
         <DeleteButtonBlock>
           <DeleteButton deleteButton={deleteButton} type='button' onClick={deleteInputValue}>

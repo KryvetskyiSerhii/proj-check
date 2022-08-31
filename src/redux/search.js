@@ -9,6 +9,7 @@ const initialState = {
   universities: [],
   webPages: [],
   searxGeneral: [],
+  searchSuggestions: [],
   url: '',
   error: 'Connection error occured',
   countries: COUNTRIES,
@@ -60,6 +61,15 @@ export const fetchWebPageData = createAsyncThunk('webPages/fetchWebPagesData', a
   return response.data.value
 })
 
+export const fetchSuggestionData = createAsyncThunk(
+  'searchSuggestions, fetchSuggestionData',
+  async word => {
+    const response = await getRequest(`${apiUrls.getSearchResult.spellSuggestions}${word}`)
+    console.log(response)
+    return response.data
+  }
+)
+
 const search = createSlice({
   name: 'search',
   initialState,
@@ -93,6 +103,12 @@ const search = createSlice({
     setImages(state, action) {
       state.images = [...action.payload]
       return state
+    },
+    setSearchSuggestions(state, action) {
+      state.searchSuggestions = [...action.payload]
+    },
+    clearSearchSuggestions(state) {
+      state.searchSuggestions = []
     },
     onRightClickMenu(state) {
       state.rightClickMenu.onShow = true
@@ -212,6 +228,16 @@ const search = createSlice({
       .addCase(fetchSearxData.rejected, state => {
         state.status = 'rejected'
       })
+      .addCase(fetchSuggestionData.pending, state => {
+        state.status = 'pending'
+      })
+      .addCase(fetchSuggestionData.fulfilled, (state, action) => {
+        state.status = 'fulfilled'
+        search.caseReducers.setSearchSuggestions(state, action)
+      })
+      .addCase(fetchSuggestionData.rejected, state => {
+        state.status = 'rejected'
+      })
   },
 })
 
@@ -225,4 +251,5 @@ export const {
   offRightClickMenu,
   switchSearchingOptions,
   setSearxGeneral,
+  clearSearchSuggestions,
 } = search.actions

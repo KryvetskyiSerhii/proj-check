@@ -22,5 +22,7 @@ export const apiUrls = {
       trending: `https://inv.riverside.rocks/api/v1/trending?local=true&region=DE`,
       audio: `https://cors-anywhere.herokuapp.com/https://www.youtube.com/get_video_info?video_id=`,
     },
+    suggestions: `https://api.datamuse.com/words?lc=`,
+    spellSuggestions: `https://api.datamuse.com/words?sp=`,
   },
 }
