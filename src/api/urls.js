@@ -20,6 +20,7 @@ export const apiUrls = {
       search: `https://inv.riverside.rocks/api/v1/search?local=true&region=DE&q=`,
       popular: `https://inv.riverside.rocks/api/v1/popular?local=true&region=DE`,
       trending: `https://inv.riverside.rocks/api/v1/trending?local=true&region=DE`,
+      audio: `https://cors-anywhere.herokuapp.com/https://www.youtube.com/get_video_info?video_id=`,
     },
   },
 }

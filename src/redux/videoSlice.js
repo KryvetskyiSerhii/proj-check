@@ -1,12 +1,14 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import { getRequest } from 'api/apiClient'
 import { apiUrls } from 'api/urls'
+import axios from 'axios'
 
 const initialState = {
   videos: [],
   popularVideos: [],
   vimeoVideos: [],
   trendingVideos: [],
+  audios: [],
   status: '',
   isLoading: false,
   isCategoryActive: false,
@@ -74,6 +76,9 @@ const videoSlice = createSlice({
       state.popularVideos = []
       state.videos = []
       return state
+    },
+    setAudioList(state, action) {
+      state.audios = [...action.payload]
     },
     onHoverModal(state) {
       state.isHoverModal = true

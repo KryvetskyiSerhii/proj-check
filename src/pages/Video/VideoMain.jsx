@@ -14,10 +14,10 @@ export const VideoMain = () => {
   const popularVideos = useSelector(state => state.videoSlice.popularVideos)
   const trendingVideos = useSelector(state => state.videoSlice.trendingVideos)
   const isLoading = useSelector(state => state.videoSlice.isLoading)
-  const [resultsVisible, setResultsVisible] = useState(10)
+  const [resultsVisible, setResultsVisible] = useState(28)
   const onFlip = useSelector(state => state.general.flipMenu)
   const showMore = () => {
-    setResultsVisible(resultsVisible + 5)
+    setResultsVisible(resultsVisible + 17)
   }
   const toHHMMSS = sec => {
     let sec_num = parseInt(sec)
@@ -78,14 +78,13 @@ export const VideoMain = () => {
                   toHHMMS={toHHMMSS}
                 />
               ))}
-          <SimpleBlock margin='20px'>
-            <VideoButton type='button' onClick={showMore}>
-              Show more results
-            </VideoButton>
-          </SimpleBlock>
         </VimeoItemsBlock>
       )}
-
+      <SimpleBlock margin='20px'>
+        <VideoButton type='button' onClick={showMore}>
+          Show more results
+        </VideoButton>
+      </SimpleBlock>
       <VideoSettings onFlip={onFlip} />
       <Footer />
     </VideoStyled>

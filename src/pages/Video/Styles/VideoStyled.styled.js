@@ -35,8 +35,9 @@ export const VideoItemContainer = styled.div`
   position: ${({ filmScreen }) => (filmScreen ? 'fixed' : 'relative')};
   top: ${({ filmScreen }) => (filmScreen ? '0' : 'none')};
   left: ${({ filmScreen }) => (filmScreen ? '0' : 'none')};
-  height: ${({ filmScreen }) => (filmScreen ? '98vh' : '300px')};
+  height: ${({ filmScreen }) => (filmScreen ? '98vh' : '225px')};
   z-index: ${({ filmScreen }) => (filmScreen ? '100' : '1')};
+  width: 200px;
   margin: 10px;
   border-radius: 10px;
   box-shadow: 15px 5px 10px #000;
@@ -47,6 +48,48 @@ export const VideoItemContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-size: 0.7rem;
+`
+export const VideoBookmarks = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0px 10px 5px 10px;
+`
+
+export const VideoBookmarkItem = styled.div`
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+`
+export const VideoBookmarkItemButton = styled.button`
+  background: transparent;
+  color: ${props => props.theme.color};
+  cursor: pointer;
+  border: ${props => props.theme.border};
+  padding: 1px 3px;
+  box-shadow: 3px 3px 1px #000;
+  &:hover {
+    opacity: 0.7;
+  }
+`
+
+export const VideoBookmarkButton = styled.button`
+  position: absolute;
+  top: 22%;
+  right: 1px;
+  height: 1.5rem;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  padding: 0px 5px;
+  z-index: 30;
+  background: #d3d3d3;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.7rem;
 `
 export const VideoItemFilmScreen = styled.img`
   position: absolute;
@@ -58,7 +101,7 @@ export const VideoItemFilmScreen = styled.img`
 `
 export const VideoTextBlock = styled.div`
   display: flex;
-  width: ${({ filmScreen }) => (filmScreen ? '95vw' : '500px')};
+  width: ${({ filmScreen }) => (filmScreen ? '95vw' : '99%')};
   justify-content: space-between;
   align-items: center;
   overflow-x: hidden;
