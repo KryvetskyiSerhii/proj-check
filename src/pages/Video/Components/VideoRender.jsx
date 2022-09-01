@@ -12,6 +12,7 @@ import ReactPlayer from 'react-player'
 import { useRef } from 'react'
 import Plyr from 'plyr-react'
 import 'plyr-react/plyr.css'
+import { useFormatTime } from 'hooks/useFormatTime'
 
 export const VideoRender = ({ source, title, length, count, toHHMMS }) => {
   const [filmScreen, setFilmScreen] = useState(false)
@@ -27,16 +28,7 @@ export const VideoRender = ({ source, title, length, count, toHHMMS }) => {
       },
     ],
   }
-
-  const handleFormatTime = seconds => {
-    if (isNaN(seconds)) return '00:00'
-    const date = new Date(seconds * 1000)
-    const hh = date.getUTCHours()
-    const mm = date.getUTCMinutes()
-    const ss = date.getUTCSeconds().toString().padStart(2, '0')
-    if (hh) return `${hh}:${mm.toString().padStart(2, '0')}:${ss}`
-    return `${mm}:${ss}`
-  }
+  const handleFormatTime = useFormatTime
 
   const handleSeekTheTime = time => {
     playerRef.current.seekTo(time)
